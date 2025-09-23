@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+body{
+    background-color: black;
+}
+
+div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+h2{
+    color: #222;
+    font-size:400px;
+    font-weight: 100;
+    user-select: none;
+    letter-spacing: -2rem;
+}
+
+input{
+    display: none;
+}
+
+#upload_btn{
+    left: 50%;
+    height: 40px;
+    width: 200px;
+    padding: 10px 20px;
+    background-color: rgb(25, 179, 206);
+    color: black;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
