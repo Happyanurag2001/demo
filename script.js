@@ -43,4 +43,6 @@ inp_f.addEventListener('change', function(dets){
     upload_btn.textContent=file.name;
   }
 });
+ 
+
 

@@ -23,7 +23,7 @@ h2{
 }
 
 input{
-    display: none;
+    /* display: none; */
 }
 
 #upload_btn{
@@ -37,3 +37,5 @@ input{
     border-radius: 5px;
     cursor: pointer;
 }
+
+
