@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+    margin: 30px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+body{
+    background-color: black;
+    color: white;
+}
+div{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+/* for event bubbling */
+.ul{
+    text-decoration: line-through;
+
+}
+    </style>
+</head>
+<body>
+    <div id="abcd"></div>
+
+    <ul>
+        <li>Apple</li>
+        <li>Guava</li>
+        <li>Grapes</li>
+        <li>Banana</li>
+        <li>Orange</li>
+    </ul>
+    
+</body>
+<script>
+
+    let abcd = document.querySelector("#abcd");
+    abcd.addEventListener("mouseover", function(){
+        abcd.style.backgroundColor = "blue";
+        console.log("Mouse Over Event Triggered");
+    });
+    abcd.addEventListener("mouseout", function(){
+        abcd.style.backgroundColor = "red";
+        console.log("Mouse Out Event Triggered");
+    });
+
+    // mousemove
+    window.addEventListener("mousemove", function(dets){
+        abcd.style.top = dets.clientY + "px";
+        abcd.style.left = dets.clientX + "px";
+        console.log(dets);
+    })
+
+
+    // eventBubbling
+    let ul = document.querySelector("ul");
+    ul.addEventListener("click", function(dets){
+        dets.target.classList.toggle("ul");
+    })
+
+
+
+</script>
+</html>
