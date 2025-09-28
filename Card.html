@@ -54,14 +54,13 @@
 
         .card h1 {
             margin-top: 1px;
-            color: rgb(250, 234, 16);           
-
+            color: rgb(250, 234, 16);
         }
-                .card h2{
-                    font-size: 20px;
-                    color: aqua;
 
-                }
+        .card h2 {
+            font-size: 20px;
+            color: aqua;
+        }
 
         .card p {
             margin-top: 5px;
@@ -70,9 +69,7 @@
         }
 
         img {
-
             height: inherit;
-
         }
     </style>
 </head>
@@ -87,7 +84,6 @@
             <input type="submit">
         </form>
     </div>
-
 </body>
 <script>
     // form card 
@@ -96,39 +92,30 @@
     let main = document.querySelector("#main");
     form.addEventListener("submit", function (dets) {
         dets.preventDefault();
-
         // creating card
         let card = document.createElement("div")
         card.classList.add("card");
-
         let profile = document.createElement("div");
         profile.classList.add("profile");
-
-
         let img = document.createElement("img");
         img.setAttribute("src", input[0].value);
-
         let h1 = document.createElement("h1");
         h1.textContent = input[1].value;
         let h2 = document.createElement("h2");
         h2.textContent = input[2].value;
-
         let p = document.createElement("p");
         p.textContent = input[3].value;
-
         profile.appendChild(img);
         card.appendChild(profile);
         card.appendChild(h1);
         card.appendChild(h2);
         card.appendChild(p);
-
         main.appendChild(card);
 
         input.forEach(function (inp) {
             if (inp.type !== "submit") {
                 inp.value = "";
             }
-
         })
     });
 </script>
